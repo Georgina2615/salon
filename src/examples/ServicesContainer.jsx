@@ -14,12 +14,12 @@ export const ServicesContainer = () => {
   }, []);
 
   if (loading) {
-    return <div className="p-10 text-center text-stone-500 tracking-widest uppercase text-sm animate-pulse">Cargando catálogo...</div>;
+    return <div className="p-10 text-center text-fuerte/80 tracking-widest uppercase text-sm animate-pulse">Cargando catálogo...</div>;
   }
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-light tracking-wide mb-8 text-stone-800 border-b border-stone-300 pb-3">
+      <h2 className="text-3xl font-light tracking-wide mb-8 text-fuerte border-b border-fuerte/30 pb-3">
         Nuestros Servicios
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

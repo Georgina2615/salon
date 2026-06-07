@@ -14,8 +14,8 @@ export const NewClientForm = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-sm shadow-sm border border-stone-200 mt-8">
-      <h3 className="text-xl font-light text-stone-800 border-b border-stone-200 pb-3 mb-4">
+    <div className="bg-medio p-6 rounded-sm shadow-sm border border-fuerte/20 mt-8">
+      <h3 className="text-xl font-light text-fuerte border-b border-fuerte/30 pb-3 mb-4">
         Registrar Nuevo Cliente
       </h3>
       
@@ -27,7 +27,7 @@ export const NewClientForm = () => {
             value={values.nombre}
             onChange={handleInputChange}
             placeholder="Nombre completo"
-            className="w-full p-2 border border-stone-300 rounded-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+            className="w-full p-2 bg-claro border border-fuerte/30 rounded-sm text-fuerte focus:outline-none focus:border-fuerte focus:ring-1 focus:ring-fuerte placeholder-fuerte/50"
             required
           />
           <input
@@ -36,7 +36,7 @@ export const NewClientForm = () => {
             value={values.telefono}
             onChange={handleInputChange}
             placeholder="Teléfono"
-            className="w-full p-2 border border-stone-300 rounded-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+            className="w-full p-2 bg-claro border border-fuerte/30 rounded-sm text-fuerte focus:outline-none focus:border-fuerte focus:ring-1 focus:ring-fuerte placeholder-fuerte/50"
             required
           />
         </div>
@@ -46,12 +46,12 @@ export const NewClientForm = () => {
           value={values.servicio}
           onChange={handleInputChange}
           placeholder="Servicio de interés (Ej. Balayage)"
-          className="w-full p-2 border border-stone-300 rounded-sm focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+          className="w-full p-2 bg-claro border border-fuerte/30 rounded-sm text-fuerte focus:outline-none focus:border-fuerte focus:ring-1 focus:ring-fuerte placeholder-fuerte/50"
           required
         />
         <button 
           type="submit"
-          className="w-full bg-stone-800 text-stone-100 py-2 rounded-sm hover:bg-stone-700 transition-colors font-medium tracking-wide cursor-pointer"
+          className="w-full bg-fuerte text-claro py-2 rounded-sm cursor-pointer font-medium tracking-wide hover:opacity-90 transition-opacity"
         >
           Guardar Registro
         </button>

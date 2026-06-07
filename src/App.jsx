@@ -13,7 +13,7 @@ function App() {
 
   return (
     <AuthProvider>
-      <div className="min-h-screen bg-stone-50 font-sans pb-12">
+      <div className="min-h-screen bg-claro font-sans pb-12">
         <Header />
         <ServicesContainer />
         
@@ -26,7 +26,7 @@ function App() {
             {!showInventory && (
               <button 
                 onClick={() => setShowInventory(true)}
-                className="bg-stone-800 text-stone-100 px-6 py-2 rounded-sm hover:bg-stone-700 transition-colors cursor-pointer"
+                className="bg-fuerte text-claro px-6 py-2 rounded-sm hover:bg-medio transition-colors cursor-pointer"
               >
                 Cargar Módulo de Inventario
               </button>
