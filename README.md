@@ -1,16 +1,43 @@
-# React + Vite
+# Salón Elegance - Dashboard Administrativo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web (Mini-Dashboard) para la gestión de un salón de belleza, desarrollada con React y Tailwind CSS v4. Su propósito principal es demostrar la implementación práctica de **6 Patrones Avanzados y Buenas Prácticas en React** aplicados a un caso de uso real.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
+* React 18
+* Vite
+* Tailwind CSS v4
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Patrones y Conceptos Implementados
 
-## React Compiler
+A lo largo del código de este proyecto, se implementaron los siguientes conceptos avanzados para mantener una arquitectura limpia y escalable:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Componentes Contenedores y Presentacionales:** - *Ubicación:* `src/examples/ServicesContainer.jsx` y `src/components/ServiceCard.jsx`.
+   - *Uso:* Separación de la lógica de carga de datos (servicios del salón) de la vista (tarjetas de interfaz).
 
-## Expanding the ESLint configuration
+2. **Higher-Order Components (HOCs):**
+   - *Ubicación:* `src/examples/withAuth.jsx`.
+   - *Uso:* Un "guardia de seguridad" que protege el componente de `FinancialReport.jsx`, permitiendo el acceso solo a usuarios con rol de administrador.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Render Props:**
+   - *Ubicación:* `src/components/AppointmentManager.jsx`.
+   - *Uso:* Un motor lógico que controla los estados de una cita (Pendiente, En Curso, Finalizado) y le presta estos datos a la vista en `AppointmentsSection.jsx` para que los dibuje.
+
+4. **Custom Hooks:**
+   - *Ubicación:* `src/hooks/useForm.js`.
+   - *Uso:* Extracción de la lógica repetitiva para el manejo de inputs y estados en el formulario de registro de nuevos clientes (`NewClientForm.jsx`).
+
+5. **Context API:**
+   - *Ubicación:* `src/context/AuthContext.jsx`.
+   - *Uso:* Creación de un estado global para manejar el rol del usuario (Autenticación simulada) y evitar el *Prop Drilling* desde el componente `Header.jsx` hasta los componentes protegidos.
+
+6. **Code Splitting (Carga Perezosa):**
+   - *Ubicación:* `src/App.jsx` y `src/examples/Inventory.jsx`.
+   - *Uso:* Implementación de `React.lazy` y `<Suspense>` para diferir la descarga del módulo de inventario hasta que el usuario hace clic en el botón de carga, optimizando el rendimiento inicial de la aplicación.
+
+## Instalación y Uso
+
+Para correr este proyecto en tu entorno local:
+
+1. Clona este repositorio:
+   ```bash
+   git clone [https://github.com/Georgina2615/salon.git](https://github.com/Georgina2615/salon.git)
