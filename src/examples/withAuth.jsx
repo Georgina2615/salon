@@ -1,9 +1,10 @@
-export const withAuth = (WrappedComponent) => {
-  // Retornamos un nuevo componente funcional
-  return (props) => {
-    const userRole = "receptionist"; 
+import { useAuth } from '../context/AuthContext';
 
-    if (userRole !== "admin") {
+export const withAuth = (WrappedComponent) => {
+  return (props) => {
+    const { role } = useAuth(); 
+
+    if (role !== "admin") {
       return (
         <div className="bg-red-50 p-6 rounded-sm border border-red-100 text-center mt-8">
           <h3 className="text-red-800 font-medium tracking-wide">Acceso Restringido</h3>
